@@ -1,12 +1,20 @@
 {
+<<<<<<< HEAD
   "name": "pratica10",
   "version": "1.5.8",
+=======
+  "name": "pratica02",
+  "version": "1.0.0",
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js"
+<<<<<<< HEAD
 
+=======
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
   },
   "keywords": [],
   "author": "",

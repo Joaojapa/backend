@@ -1,4 +1,5 @@
 type: collection.insomnia.rest/5.0
+<<<<<<< HEAD
 name: Tarefas
 meta:
   id: wrk_f199dad30d9646fb824bbc3014d43993
@@ -28,6 +29,26 @@ collection:
     headers:
       - name: Content-Type
         value: application/json
+=======
+name: tarefas
+meta:
+  id: wrk_83611650451346a58d8581500e0c29df
+  created: 1755781368892
+  modified: 1755781368892
+  description: ""
+collection:
+  - url: http://localhost:3000/tarefas
+    name: '"GET /tarefas – listar" (URL: http://localhost:3000/tarefas)'
+    meta:
+      id: req_c2713e44ce6e47dca4fd2bfa55a10f10
+      created: 1755781378524
+      modified: 1755781644044
+      isPrivate: false
+      description: ""
+      sortKey: -1755781378524
+    method: GET
+    headers:
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
       - name: User-Agent
         value: insomnia/11.4.0
     settings:
@@ -39,6 +60,7 @@ collection:
         store: true
       rebuildPath: true
   - url: http://localhost:3000/tarefas
+<<<<<<< HEAD
     name: 'POST /tarefas – criar" (URL: http://localhost:3000/tarefas, Body com a
       tarefa)'
     meta:
@@ -52,13 +74,31 @@ collection:
     body:
       mimeType: application/json
       text: |+
+=======
+    name: '"POST /tarefas – criar" (URL: http://localhost:3000/tarefas, Body com a
+      tarefa).'
+    meta:
+      id: req_fdd9cab705d54d7cb9188f0426560a67
+      created: 1755781432225
+      modified: 1755781651588
+      isPrivate: false
+      description: ""
+      sortKey: -1755781378474
+    method: POST
+    body:
+      mimeType: application/json
+      text: |
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
         {
            "nome": "Estudar API REST",
            "prioridade": 1,
            "concluida": false
         }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
     headers:
       - name: Content-Type
         value: application/json
@@ -72,6 +112,7 @@ collection:
         send: true
         store: true
       rebuildPath: true
+<<<<<<< HEAD
   - url: http://localhost:3000/tarefas/f7b6
     name: GET /tarefas/{id} – por id" (URL com o idTarefa criado)
     meta:
@@ -85,13 +126,31 @@ collection:
     body:
       mimeType: application/json
       text: |+
+=======
+  - url: http://localhost:3000/tarefas/8c99
+    name: '"GET /tarefas/{id} – por id" (URL com o idTarefa criado).'
+    meta:
+      id: req_0844f467acf64629b3a98d5ad8cd7891
+      created: 1755781477996
+      modified: 1755781658670
+      isPrivate: false
+      description: ""
+      sortKey: -1755781378424
+    method: GET
+    body:
+      mimeType: application/json
+      text: |
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
         {
            "nome": "Estudar API REST",
            "prioridade": 1,
            "concluida": false
         }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
     headers:
       - name: Content-Type
         value: application/json
@@ -105,6 +164,7 @@ collection:
         send: true
         store: true
       rebuildPath: true
+<<<<<<< HEAD
   - url: http://localhost:3000/tarefas/f7b6
     name: GET /tarefas/1 – não encontrado" (espera 404 se não existir).
     meta:
@@ -118,13 +178,31 @@ collection:
     body:
       mimeType: application/json
       text: |+
+=======
+  - url: http://localhost:3000/tarefas/1
+    name: '"GET /tarefas/1 – não encontrado" (espera 404 se não existir).'
+    meta:
+      id: req_7eec5349232346e988e70eee5bc53427
+      created: 1755781528908
+      modified: 1755781686680
+      isPrivate: false
+      description: ""
+      sortKey: -1755781378374
+    method: GET
+    body:
+      mimeType: application/json
+      text: |
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
         {
            "nome": "Estudar API REST",
            "prioridade": 1,
            "concluida": false
         }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
     headers:
       - name: Content-Type
         value: application/json
@@ -138,6 +216,7 @@ collection:
         send: true
         store: true
       rebuildPath: true
+<<<<<<< HEAD
   - url: http://localhost:3000/tarefas/f7b6
     name: PUT /tarefas/{id} – atualizar" (URL com o idTarefa, Body com os campos
       atualizados).
@@ -152,13 +231,32 @@ collection:
     body:
       mimeType: application/json
       text: |+
+=======
+  - url: http://localhost:3000/tarefas/8c99
+    name: '"PUT /tarefas/{id} – atualizar" (URL com o idTarefa, Body com os campos
+      atualizados).'
+    meta:
+      id: req_6947c9d1087b448298d9af2d77f281dd
+      created: 1755781550056
+      modified: 1755781692973
+      isPrivate: false
+      description: ""
+      sortKey: -1755781378324
+    method: PUT
+    body:
+      mimeType: application/json
+      text: |
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
         {
            "nome": "Estudar API REST",
            "prioridade": 2,
            "concluida": true
         }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
     headers:
       - name: Content-Type
         value: application/json
@@ -172,6 +270,7 @@ collection:
         send: true
         store: true
       rebuildPath: true
+<<<<<<< HEAD
   - url: http://localhost:3000/tarefas/f7b6
     name: PATCH /tarefas/{id} – atualizar parcial" (URL com o idTarefa, Body
       parcial).
@@ -192,6 +291,26 @@ collection:
 
 
 
+=======
+  - url: http://localhost:3000/tarefas/8c99
+    name: '"PATCH /tarefas/{id} – atualizar parcial" (URL com o idTarefa, Body
+      parcial).'
+    meta:
+      id: req_1868d0b7d0a74635a8654f5bb9d8b4a3
+      created: 1755781591665
+      modified: 1755781698233
+      isPrivate: false
+      description: ""
+      sortKey: -1755781378274
+    method: PATCH
+    body:
+      mimeType: application/json
+      text: |
+        
+        {
+           "concluida": false
+        }
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
     headers:
       - name: Content-Type
         value: application/json
@@ -205,6 +324,7 @@ collection:
         send: true
         store: true
       rebuildPath: true
+<<<<<<< HEAD
   - url: http://localhost:3000/tarefas/f7b6
     name: DELETE /tarefas/{id} – remover" (URL com o idTarefa).
     meta:
@@ -224,6 +344,25 @@ collection:
 
 
 
+=======
+  - url: http://localhost:3000/tarefas/8c99
+    name: '"DELETE /tarefas/{id} – remover" (URL com o idTarefa).'
+    meta:
+      id: req_610692b5bd7440ddbe5af11b3e188b19
+      created: 1755781608764
+      modified: 1755781704094
+      isPrivate: false
+      description: ""
+      sortKey: -1755781378224
+    method: DELETE
+    body:
+      mimeType: application/json
+      text: |
+        
+        {
+           "concluida": false
+        }
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
     headers:
       - name: Content-Type
         value: application/json
@@ -240,6 +379,7 @@ collection:
 cookieJar:
   name: Default Jar
   meta:
+<<<<<<< HEAD
     id: jar_26a56e7b69f5dc46f15739d7c269eddd8d0d0d05
     created: 1755776988150
     modified: 1755776988150
@@ -249,4 +389,15 @@ environments:
     id: env_26a56e7b69f5dc46f15739d7c269eddd8d0d0d05
     created: 1755776988146
     modified: 1755776988146
+=======
+    id: jar_df7c512cf33ad0ff1efe89454fc8675cfee0eee3
+    created: 1755781368900
+    modified: 1755781368900
+environments:
+  name: Base Environment
+  meta:
+    id: env_df7c512cf33ad0ff1efe89454fc8675cfee0eee3
+    created: 1755781368896
+    modified: 1755781368896
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
     isPrivate: false

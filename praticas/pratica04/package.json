@@ -1,6 +1,7 @@
 {
   "name": "pratica04",
   "version": "1.0.0",
+<<<<<<< HEAD
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -9,6 +10,16 @@
   },
   "keywords": [],
   "author": "",
+=======
+  "description": "API REST de Tarefas usando Express e Node.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["api", "tarefas", "express", "nodejs"],
+  "author": "Seu Nome",
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0"

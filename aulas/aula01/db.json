@@ -1,6 +1,7 @@
 {
   "contatos": [
     {
+<<<<<<< HEAD
       "nome": "Pedro",
       "id": "3bd3",
       "email": "pedro@iesb.com"
@@ -14,6 +15,31 @@
       "nome": "Jorge",
       "email": "jorge@iesb.com",
       "id": "fdca"
+=======
+      "id": "2e16",
+      "nome": "Matheus",
+      "email": "matheus.costa@iesb.br"
+    },
+    {
+      "id": "167b",
+      "nome": "Maria",
+      "email": "maria@iesb.br"
+    },
+    {
+      "id": "7c50",
+      "nome": "Pedro",
+      "email": "pedro@iesb.br"
+    },
+    {
+      "id": "8534",
+      "nome": "Pedro",
+      "email": "pedro@iesb.br"
+    },
+    {
+      "id": "efae",
+      "nome": "Pedro",
+      "email": "pedro@iesb.br"
+>>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
     }
   ]
 }
