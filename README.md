@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Construção de Backend
 
 Repositório criado para as aulas teóricas e atividades práticas da disciplina.
@@ -44,6 +43,3 @@ npm run dev
 ```shell
 npm run test
 ```
-=======
-# backend
->>>>>>> a0fa51f741bc3f588a91410dc999e347cac973da
