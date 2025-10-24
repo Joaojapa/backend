@@ -1,29 +1,14 @@
 {
   "contatos": [
     {
-      "id": "2e16",
-      "nome": "Matheus",
-      "email": "matheus.costa@iesb.br"
+      "nome": "Pedro",
+      "email": "anaodebuteco2@gmail.com",
+      "id": "490d"
     },
     {
-      "id": "167b",
+      "id": "e7d3",
       "nome": "Maria",
-      "email": "maria@iesb.br"
-    },
-    {
-      "id": "7c50",
-      "nome": "Pedro",
-      "email": "pedro@iesb.br"
-    },
-    {
-      "id": "8534",
-      "nome": "Pedro",
-      "email": "pedro@iesb.br"
-    },
-    {
-      "id": "efae",
-      "nome": "Pedro",
-      "email": "pedro@iesb.br"
+      "email": "maria@gmail.com"
     }
   ]
 }

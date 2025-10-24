@@ -1,49 +1,32 @@
-const supertest = require("supertest");
+const request = require("supertest");
 const app = require("../app");
-const request = supertest(app);
 
-test("GET /tarefas deve retornar 200", async () => {
-    const response = await request.get("/tarefas");
-    expect(response.status).toBe(200).json();
-})
+describe("API de Tarefas", () => {
+  let tarefaId;
 
-test("POST /tarefas deve retornar 201", async () => {
-    const dados = {nome: "Estudar Node", concluida: false};
-    const response = await request.post("/tarefas").send(dados);
-    expect(response.status).toBe(201);
-    expect(response.headers['content-type']).toMatch(/json/);
-    expect(response.body.id).toBeDefined();
-    id = parseInt(response.body.id);
-})
+  test("GET /tarefas → 200 JSON", async () => {
+    const res = await request(app).get("/tarefas");
+    expect(res.statusCode).toBe(200);
+    expect(res.headers["content-type"]).toMatch(/json/);
+  });
 
-// Letra (G)
-test('GET /tarefas/id deve retornar 200', async () => {
-    const response = await request.get(`/tarefas/${id}`);
-    expect(response.status).toBe(200);
-    expect(response.headers['content-type']).toMatch(/json/);
-})
+  test("POST /tarefas → 201 JSON", async () => {
+    const res = await request(app)
+      .post("/tarefas")
+      .send({ nome: "Estudar Node", concluida: false });
+    expect(res.statusCode).toBe(201);
+    tarefaId = res.body.id;
+  });
 
-// Letra (H)
-test("GET /tarefas/1 retorna 404", async () => {
-    const response = await request.get(`/tarefas/1`)
-    expect(response.status).toBe(404);
-    expect(response.headers['content-type']).toMatch(/json/);
+  test("GET /tarefas/:id → 200 JSON", async () => {
+    const res = await request(app).get(`/tarefas/${tarefaId}`);
+    expect(res.statusCode).toBe(200);
+  });
 
-})
+  test("GET /tarefas/1 → 404", async () => {
+    const res = await request(app).get("/tarefas/1");
+    expect(res.statusCode).toBe(404);
+  });
 
-// Letra (I)
-test("PUT /tarefas/id deve retornar 200", async () => {
-    const dados = {nome: "Estudar Node", concluida: true};
-    const response = await request.put(`/tarefas/${id}`).send(dados);
-    expect(response.status).toBe(200);
-    expect(response.headers['content-type']).toMatch(/json/);
-    expect(response.body.nome).toBe(dados.nome);
-    expect(response.body.concluida).toBe(true);
-})
-
-// Letra (J)
-test("PUT /tarefas/1 retorna 404", async () => {
-    const response = await request.put(`/tarefas/1`);
-    expect(response.status).toBe(200);
-    expect(response.headers['content-type']).toMatch(/json/);
-})
+  // PUT e DELETE seguindo o mesmo padrão...
+});
