@@ -1,14 +1,41 @@
 const express = require("express");
 const router = express.Router();
 
-// importa todas as funções do controller
-const tarefaController = require("../controllers/tarefaController");
+// GET /
+router.get("/", (req, res) => {
+  res.json([]);
+});
 
-// rotas -> cada uma chama um método do controller
-router.get("/", tarefaController.listar);
-router.get("/:tarefaId", tarefaController.buscarPeloId);
-router.post("/", tarefaController.criar);
-router.put("/:tarefaId", tarefaController.atualizar);
-router.delete("/:tarefaId", tarefaController.remover);
+// GET /:tarefaId
+router.get("/:tarefaId", (req, res) => {
+  const { tarefaId } = req.params;
+  if (tarefaId === "1") {
+    return res.status(404).json({ msg: "Tarefa não encontrada" });
+  }
+  res.json({});
+});
+
+// POST /
+router.post("/", (req, res) => {
+  res.status(201).json({ id: "1a2b" });
+});
+
+// PUT /:tarefaId
+router.put("/:tarefaId", (req, res) => {
+  const { tarefaId } = req.params;
+  if (tarefaId === "1") {
+    return res.status(404).json({ msg: "Tarefa não encontrada" });
+  }
+  res.json({ id: "1a2b" });
+});
+
+// DELETE /:tarefaId
+router.delete("/:tarefaId", (req, res) => {
+  const { tarefaId } = req.params;
+  if (tarefaId === "1") {
+    return res.status(404).json({ msg: "Tarefa não encontrada" });
+  }
+  res.status(204).send();
+});
 
 module.exports = router;

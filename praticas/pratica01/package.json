@@ -2,13 +2,9 @@
   "name": "pratica01",
   "version": "1.0.0",
   "description": "",
-<<<<<<< HEAD
-  "main": "pratica01.js",
-=======
   "main": "index.js",
->>>>>>> b0866b5a7306cd53f159dcc2cf65fd811478b948
   "scripts": {
-    "test": "npx json-server db.json"
+"test": "npx json-server db.json"
   },
   "keywords": [],
   "author": "",

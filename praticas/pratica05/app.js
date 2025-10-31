@@ -1,12 +1,27 @@
-const express = require("express")
-const tarefaRouter = require("./routes/tarefaRouter")
+var express = require('express');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var logger = require('morgan');
 
-const app = express()
+var indexRouter = require('./routes/index');
+var usersRouter = require('./routes/users');
 
-// permite receber JSON no body
-app.use(express.json())
+var app = express();
 
-// usa o router para a rota /tarefas
-app.use("/tarefas", tarefaRouter)
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-module.exports = app
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+
+<<<<<<< HEAD
+=======
+const tarefaRouter = require("./routes/tarefaRouter");
+app.use("/tarefas", tarefaRouter);
+
+
+>>>>>>> db07edac9fbfbffd87c6e78c467494d5ff0f2634
+module.exports = app;

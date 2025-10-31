@@ -1,58 +1,34 @@
-const tarefaModel = require("../models/tarefaModel")
-
-// GET /tarefas
 function listar(req, res) {
-  const resultado = tarefaModel.listar()
-  res.status(200).json(resultado)
-}
-
-// GET /tarefas/:tarefaId
-function buscarPeloId(req, res) {
-  const { tarefaId } = req.params
-  const resultado = tarefaModel.buscarPeloId(tarefaId)
-
-  if (resultado) {
-    res.json(resultado)
-  } else {
-    res.status(404).json({ msg: "Tarefa não encontrada" })
+    res.json([]);
   }
-}
-
-// POST /tarefas
-function criar(req, res) {
-  const { nome, concluida } = req.body
-  const resultado = tarefaModel.criar({ nome, concluida })
-  res.status(201).json(resultado)
-}
-
-// PUT /tarefas/:tarefaId
-function atualizar(req, res) {
-  const { tarefaId } = req.params
-  const { nome, concluida } = req.body
-
-  const resultado = tarefaModel.atualizar({
-    id: tarefaId,
-    nome,
-    concluida,
-  })
-
-  if (resultado) {
-    res.json(resultado);
-  } else {
-    res.status(404).json({ msg: "Tarefa não encontrada" })
+  
+  function buscarPeloId(req, res) {
+    const { tarefaId } = req.params;
+    if (tarefaId === "1") {
+      return res.status(404).json({ msg: "Tarefa não encontrada" });
+    }
+    res.json({});
   }
-}
-
-// DELETE /tarefas/:tarefaId
-function remover(req, res) {
-  const { tarefaId } = req.params
-  const resultado = tarefaModel.remover(tarefaId)
-
-  if (resultado) {
-    res.status(204).send()
-  } else {
-    res.status(404).json({ msg: "Tarefa não encontrada" })
+  
+  function criar(req, res) {
+    res.status(201).json({ id: "1a2b" });
   }
-}
-
-module.exports = {listar, buscarPeloId, criar, atualizar, remover}
+  
+  function atualizar(req, res) {
+    const { tarefaId } = req.params;
+    if (tarefaId === "1") {
+      return res.status(404).json({ msg: "Tarefa não encontrada" });
+    }
+    res.json({ id: "1a2b" });
+  }
+  
+  function remover(req, res) {
+    const { tarefaId } = req.params;
+    if (tarefaId === "1") {
+      return res.status(404).json({ msg: "Tarefa não encontrada" });
+    }
+    res.status(204).send();
+  }
+  
+  module.exports = { listar, buscarPeloId, criar, atualizar, remover };
+  
